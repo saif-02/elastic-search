@@ -1,0 +1,14 @@
+Version: "3.0"
+
+services:
+  elasticsearch:
+    build:
+      context: elasticsearch/
+	  dockerfile:./dockerfile
+	image: enterprise-assignment
+	ports:
+      - "9200:9200"
+	    "80:80"
+    volumes:
+      - .elasticsearch:/usr/share/elasticsearch/data
+      
